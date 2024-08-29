@@ -1,0 +1,76 @@
+<style>
+  .search-btn{
+    background-color: #fe424d;
+    margin-right: 13rem;
+    border-radius: 1rem;
+    color: white;
+  }
+
+  .search-btn:hover{
+    background-color: #fe424d;
+    margin-right: 13rem;
+    border-radius: 1rem;
+  }
+
+
+  .search-inp{
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+  }
+
+  .search-btn i{
+    display: inline;
+    margin-right: 0.5rem;
+  }
+</style>
+
+
+
+<nav class="navbar navbar-expand-sm  navbar-light bg-body-light sticky-top mb-5">
+    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass bnbn"></i></a>
+    <button class="navbar-toggler" type="button"data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link bnb" href="/listings"> <b>Explore</b></a>
+        </li>
+        <li class="nav-item">
+          
+        </li>
+        
+      </ul>
+    </div>
+   
+
+    <div class="navbar-nav">
+
+      <form class="d-flex" role="search" action="/search" method="GET">
+        <input class="form-control me-2 search-inp" type="text" name="q" placeholder="Search" >
+        
+        <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+      </form>
+    </div>
+
+    <div class="navbar-nav">
+      <a class="nav-link" href="/listings/new">Add new Listing</a>
+      <% if(!CurrUser){ %>
+      <a class="nav-link" href="/signup"> <b>Sign up</b></a>
+      <a class="nav-link" href="/login"><b>Log in</b></a>
+      <%}%>
+      <% if(CurrUser){ %>
+      <a class="nav-link" href="/logout"> <b>Log Out</b></a>
+      <% } %>
+    </div>
+  </nav>
+
+
+
+ <script>
+    
+ </script>
